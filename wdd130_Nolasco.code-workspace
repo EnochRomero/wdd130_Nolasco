@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "wdd130_Nolasco",
+			"path": "../../../Documents/GitHub/wdd130_Nolasco"
+		},
+		{
+			"name": "mexican_style",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "mexican_style"
+	}
+}
