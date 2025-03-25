@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Mexican Food</title>
         <link type="text/css" rel="stylesheet" href="styles/style.css">
+
+
       </head>
 
     <style>
@@ -12,11 +14,20 @@
         #hero {
             background-image: url(images/mole.jpg);
             height: 500px;
+            border-style: solid;
+            border-color: #d32f2f;
+            border-width: 5px;
+            background-position: 50% 50%; 
+            background-size: contain;
+
         }
 
         #picture {
             height: 300px;
-            width: 300px;
+            width: 85%;
+            border-style: solid;
+            border-color: #d32f2f;
+            border-width: 4px;
         }
 
         li {
@@ -30,7 +41,30 @@
         nav {
             background-color: #d32f2f;
             height: 50px;
+            padding: 2%;
+            display: grid;
+            grid-template-columns: 10% 20% 20% 20%;
+            align-items: center;
         }
+
+        h2 {
+            font-size: 75px;
+            margin: 1%;
+        }
+
+        a:link, a:visited {
+            color: white;
+            text-decoration: none;             
+            font-family: "IM Fell French Canon SC", Helvetica, sans-serif;
+            font-size: 40px;
+            margin: 18px;
+            padding: 8px;
+        }
+
+        a:hover {
+            background-color: #ff9800;
+        }
+
 
         #content {
             display: grid;
@@ -38,11 +72,94 @@
             grid-template-rows: repeat(5, auto);
             text-align: center;
             margin: 50px;
+            background-color: white; 
+            margin-top: 0%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4%;
+            padding-top: 0;
+            border-style: solid;
+            border-color: #d32f2f;
+            border-width: 5px;
+        }
+
+        body {
+            background-color: #ff9800;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-size: 200%;
+        }
+
+        #logo {
+            height: 50px;
+            width: 50px;
+            margin-top: 10%;
+        }
+
+        #homenav {
+            grid-column: 2 / 3;
+        }
+
+        #recipenav {
+            grid-column: 3 / 4;
+        }
+
+        #vlognav {
+            grid-column: 4 / 5;
+
+        }
+
+        #logocircle {
+            background-color: white;
+            margin: auto;
+            height: 65px;
+            width: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            text-align: center;
+            height: 180px;
+        }
+
+        #contactus {
+            grid-column: 1 / 2;
+        }
+
+        #storehours {
+            grid-column: 2 / 3;
+
+        }
+
+        #join {
+            grid-column: 3 / 4;
 
         }
 
 
+        .footlink {
+            background-color: aqua;
+            font-size: 10px;
+            color: #000;
+        }
 
+
+
+
+
+
+        
 
     </style>
 
@@ -51,12 +168,15 @@
 </head>
 <body>
 
+
     <nav>
-        <menu>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
-        <li><a href="blog.html">Blog</a></li>
-    </menu>
+        <div id="logocircle">
+            <img src="images/logo_solo.png" alt="Logo" id="logo">
+        </div>
+        
+        <li id="homenav"><a href="index.html">Home</a></li>
+        <li id="recipenav"><a href="recipes.html">Recipes</a></li>
+        <li id="vlognav"><a href="blog.html">Blog</a></li>
     </nav>
 
     <div id="hero" style="text-align: center; padding-top: 150px;">
@@ -86,8 +206,33 @@
 
 </div>
 
+<footer>
+    <div id="contactus">
+        <h3>Contact Us</h3>
+        <p>999-9999-9999</p>
+        <p>Email@letter.com</p>
+        <p>123 Street City</p>
 
-<footer></footer>
+
+    </div>
+
+    <div id="storehours">
+        <h3>Our Hours</h3>
+        <p>Mon-Fri: 10am - 7pm</p>
+        <p>Sat: 10am - 10pm</p>
+        <p>Sun: Closed</p>
+    </div>
+
+    <div id="Join">
+        <h3>Join Our Team</h3>
+        <p>Send us and an email</p>
+        <p>Inlude your resume</p>
+        <p>Include a cover letter</p>
+    </div>
+
+
+
+</footer>
 
 </body>
 </html>
