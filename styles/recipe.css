@@ -1,28 +1,8 @@
-#hero {
-    background-image: url(images/enchiladas.jpg);
-    height: 500px;
-    border-style: solid;
-    border-color: #d32f2f;
-    border-width: 5px;
-    background-position: 50% 50%; 
-    background-size: contain;
-
-}
-
-#picture {
-    height: 300px;
-    width: 85%;
-    border-style: solid;
-    border-color: #d32f2f;
-    border-width: 4px;
-}
-
-li {
-    display: inline;
-}
-
-h1, h2{
-    font-family: "IM Fell French Canon SC", Helvetica, sans-serif;
+body {
+    background-color: #ff9800;
+    
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -32,59 +12,27 @@ nav {
     display: grid;
     grid-template-columns: 10% 20% 20% 20%;
     align-items: center;
+    
 }
 
-h2 {
-    font-size: 75px;
-    margin: 1%;
-}
-
-a:link, a:visited {
-    color: white;
-    text-decoration: none;             
-    font-family: "IM Fell French Canon SC", Helvetica, sans-serif;
-    font-size: 40px;
-    margin: 18px;
-    padding: 8px;
-}
-
-a:hover {
-    background-color: #ff9800;
-}
-
-
-#content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
-    text-align: center;
-    margin: 50px;
-    background-color: white; 
-    margin-top: 0%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 4%;
-    padding-top: 0;
-    border-style: solid;
-    border-color: #d32f2f;
-    border-width: 5px;
-}
-
-body {
-    background-color: #ff9800;
-    align-items: center;
-}
-
-.hero-text {
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    font-size: 200%;
+#logocircle {
+    background-color: white;
+    margin: auto;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 #logo {
     height: 50px;
     width: 50px;
     margin-top: 10%;
+}
+
+li {
+    display: inline;
 }
 
 #homenav {
@@ -97,19 +45,110 @@ body {
 
 #vlognav {
     grid-column: 4 / 5;
+}
+
+nav a:link, nav a:visited {
+    color: white;
+    text-decoration: none;             
+    font-family: "IM Fell French Canon SC";
+    font-size: 40px;
+    margin: 18px;
+    padding: 8px;
+}
+
+nav a:hover {
+    background-color: #ff9800;
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    height: 500px;
+    overflow: hidden; /* Prevents the image from overflowing the hero box */
+    margin-bottom: 20px; /* Adds spacing between the hero and the recipe section */
+}
+
+#hero-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height:500px;
+}
+
+#hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the box without stretching */
+    display: block;
+}
+
+#hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    text-align: center;
+    margin: 50px;
+    background-color: white; 
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4%;
+    padding-top: 0;
+    border-style: solid;
+    border-color: #d32f2f;
+    border-width: 5px;
+}
+#content h2{
+    grid-column: 1/-1;
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+}
+#content p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+.one{
+    grid-area: 2/1/3/2;
+
+}
+.two{
+    grid-area: 3/1/4/2;
+
+}
+.three{
+    grid-area: 4/1/5/2;
+
+}
+.four{
+    grid-area: 5/1/6/2;
 
 }
 
-#logocircle {
-    background-color: white;
-    margin: auto;
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-
-
+#picture {
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: contain;
+    border: 4px solid #d32f2f;
+    margin-bottom: 20px;
+    grid-area: 2/2/5/3;
+    justify-self: end;
 }
 
 footer {
@@ -126,14 +165,11 @@ footer {
 
 #storehours {
     grid-column: 2 / 3;
-
 }
 
 #join {
     grid-column: 3 / 4;
-
 }
-
 
 .footlink {
     background-color: aqua;
