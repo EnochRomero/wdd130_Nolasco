@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mexican Food</title>
+        <link type="text/css" rel="stylesheet" href="styles/style.css">
+        <style>
+            #hero {
+                background-image: url(images/mexican-food-blogs.jpg);
+                height: 500px;
+                background-position: center center;
+                background-size: cover;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+            #hero:hover {
+                opacity: 0.8;
+            }
+
+            .hero-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            #hero:hover .hero-overlay {
+                opacity: 1;
+            }
+
+            .hero-text {
+                text-align: center;
+                font-size: 2em;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+
+            .hero-button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #d32f2f;
+                color: white;
+                font-size: 16px;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+            .hero-button:hover {
+                background-color: #ff9800;
+            }
+
+            #content {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, auto);
+                text-align: center;
+                margin: 50px;
+            }
+
+            .content-box {
+                border: 2px solid #d32f2f;
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .content-box h2 {
+                color: #d32f2f;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .content-box p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .content-box img {
+                width: 80%;
+                max-width: 400px;
+                margin-top: 15px;
+            }
+
+            body {
+                background-color: #ff9800;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1, h2 {
+                font-family: "IM Fell French Canon SC", Helvetica, sans-serif;
+            }
+
+            nav {
+                background-color: #d32f2f;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav li {
+                margin: 0 20px;
+            }
+
+            a:link, a:visited {
+                color: white;
+                text-decoration: none;
+                font-family: "IM Fell French Canon SC", Helvetica, sans-serif;
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            a:hover {
+                background-color: #ff9800;
+            }
+
+            footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                text-align: center;
+                height: 180px;
+            }
+
+            #contactus, #storehours, #join {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div id="logocircle">
+                <img src="images/logo_solo.png" alt="Logo" id="logo" style="height: 50px; width: 50px;">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+
+        <div id="hero">
+            <div class="hero-overlay">
+                <div class="hero-text">
+                    <h1>¡Bienvenidos A Mexican Style!</h1>
+                    <h2>¡Welcome To Mexican Style!</h2>
+                    <a href="#content" class="hero-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="content-box">
+                <h2>History of Mexican Food</h2>
+                <p>Mexican cuisine has a rich history, blending ancient traditions with influences from the Spanish colonization. The roots of Mexican food can be traced back to Mesoamerican civilizations like the Aztecs and Mayans, who cultivated crops like corn, beans, and chili peppers that are still staples today.</p>
+                <img src="images/mole.jpg" alt="Mole">
+            </div>
+
+            <div class="content-box">
+                <h2>Culinary Trends</h2>
+                <p>In recent years, Mexican cuisine has gained popularity worldwide, with chefs experimenting with new flavors while still honoring traditional ingredients and techniques. From street tacos to gourmet dishes, Mexican food continues to evolve.</p>
+                <img src="images/fresh ingredients.jpg" alt="Fresh ingredients">
+            </div>
+
+            <div class="content-box">
+                <h2>Interviews with Famous Mexican Chefs</h2>
+                <p>We had the chance to speak with renowned Mexican chefs about their culinary philosophy, the future of Mexican cuisine, and their favorite ingredients. These chefs have contributed to bringing Mexican food to the global stage, and their insights are invaluable for anyone interested in the craft of cooking.</p>
+                <img src="images/mexican chef.jpg" alt="Mexican chef">
+            </div>
+        </div>
+
+        <footer>
+            <div id="contactus">
+                <h3>Contact Us</h3>
+                <p>999-9999-9999</p>
+                <p>Email@letter.com</p>
+                <p>123 Street City</p>
+            </div>
+
+            <div id="storehours">
+                <h3>Our Hours</h3>
+                <p>Mon-Fri: 10am - 7pm</p>
+                <p>Sat: 10am - 10pm</p>
+                <p>Sun: Closed</p>
+            </div>
+
+            <div id="join">
+                <h3>Join Our Team</h3>
+                <p>Send us an email</p>
+                <p>Include your resume</p>
+                <p>Include a cover letter</p>
+            </div>
+        </footer>
+    </body>
+</html>
